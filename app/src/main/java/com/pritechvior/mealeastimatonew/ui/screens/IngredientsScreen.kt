@@ -3,9 +3,10 @@ package com.pritechvior.mealeastimatonew.ui.screens
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -14,9 +15,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.pritechvior.mealeastimatonew.data.model.Ingredient
+import com.pritechvior.mealeastimatonew.data.model.TanzanianDishes
 import com.pritechvior.mealeastimatonew.viewmodel.MealEstimatorViewModel
-import java.util.UUID
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -24,27 +24,33 @@ fun IngredientsScreen(
     onContinue: () -> Unit,
     viewModel: MealEstimatorViewModel
 ) {
-    val ingredients = viewModel.getIngredients()
-    val selectedIngredients = viewModel.selectedIngredients
-    val selectedMeal = viewModel.selectedMeal
-
+    var showSearchDialog by remember { mutableStateOf(false) }
     var searchQuery by remember { mutableStateOf("") }
-    var showAddDialog by remember { mutableStateOf(false) }
-    var showNoResultsMessage by remember { mutableStateOf(false) }
-
-    val filteredIngredients = remember(ingredients, searchQuery) {
-        if (searchQuery.isEmpty()) {
-            ingredients
-        } else {
-            ingredients.filter { 
-                it.name.lowercase().contains(searchQuery.lowercase()) 
+    
+    // Get all available ingredients from TanzanianDishes
+    val allAvailableIngredients = remember {
+        TanzanianDishes.dishes.flatMap { it.ingredientsEnglish }.distinct().sorted()
+    }
+    
+    // Use ViewModel's selected ingredients
+    val selectedIngredients = viewModel.selectedIngredientNames
+    val selectedMeal = viewModel.selectedMeal
+    
+    // Initialize with ingredients from TanzanianDishes for the selected meal
+    LaunchedEffect(selectedMeal) {
+        selectedMeal?.let { meal ->
+            // Find the corresponding TanzanianDish
+            val tanzanianDish = TanzanianDishes.dishes.find { 
+                it.nameEnglish == meal.name || it.nameSwahili == meal.nameSwahili 
+            }
+            
+            // Initialize selected ingredients from the TanzanianDish if not already set
+            if (selectedIngredients.isEmpty()) {
+                val ingredientsToAdd = tanzanianDish?.ingredientsEnglish ?: emptyList()
+                val ingredientsMap = ingredientsToAdd.associateWith { 1.0 }
+                viewModel.updateSelectedIngredients(ingredientsMap)
             }
         }
-    }
-
-    // Update showNoResultsMessage when search results change
-    LaunchedEffect(searchQuery, filteredIngredients) {
-        showNoResultsMessage = searchQuery.isNotEmpty() && filteredIngredients.isEmpty()
     }
 
     Column(
@@ -52,7 +58,7 @@ fun IngredientsScreen(
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        // Show selected meal info
+        // Selected Meal Info
         selectedMeal?.let { meal ->
             Card(
                 modifier = Modifier
@@ -62,109 +68,57 @@ fun IngredientsScreen(
                     containerColor = MaterialTheme.colorScheme.primaryContainer
                 )
             ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(16.dp),
-                    verticalAlignment = Alignment.CenterVertically
+                Column(
+                    modifier = Modifier.padding(16.dp)
                 ) {
                     Text(
-                        text = meal.emoji ?: "🍽️",
+                        text = "${meal.emoji} ${meal.name}",
                         fontSize = 24.sp,
-                        modifier = Modifier.padding(end = 12.dp)
+                        fontWeight = FontWeight.Bold
                     )
-                    Column {
-                        Text(
-                            text = meal.name,
-                            fontSize = 18.sp,
-                            fontWeight = FontWeight.Medium,
-                            color = MaterialTheme.colorScheme.onPrimaryContainer
-                        )
-                        Text(
-                            text = "Type: ${viewModel.selectedMealType}",
-                            fontSize = 14.sp,
-                            color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.7f)
-                        )
-                    }
+                    Text(
+                        text = "People: ${viewModel.people.size}",
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                    Text(
+                        text = "Meal Type: ${viewModel.selectedMealType}",
+                        style = MaterialTheme.typography.bodyLarge
+                    )
                 }
             }
         }
 
-        Text(
-            text = "Select Ingredients",
-            fontSize = 24.sp,
-            fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.padding(bottom = 8.dp)
-        )
-
-        // Search bar
-        OutlinedTextField(
-            value = searchQuery,
-            onValueChange = { searchQuery = it },
+        // Header with Add Ingredient button
+        Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(bottom = 16.dp),
-            placeholder = { Text("Search or type new ingredient name") },
-            leadingIcon = {
-                Icon(
-                    imageVector = Icons.Default.Search,
-                    contentDescription = "Search"
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column {
+                Text(
+                    text = "Recommended Ingredients",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold
                 )
-            },
-            trailingIcon = {
-                IconButton(onClick = { 
-                    if (searchQuery.isNotBlank()) {
-                        showAddDialog = true
-                    }
-                }) {
-                    Icon(
-                        imageVector = Icons.Default.Add,
-                        contentDescription = "Add custom ingredient"
-                    )
-                }
-            },
-            singleLine = true,
-            shape = RoundedCornerShape(12.dp)
-        )
-
-        // No results message with "Add" button
-        if (showNoResultsMessage) {
-            Card(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(bottom = 16.dp),
-                colors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.secondaryContainer
+                Text(
+                    text = "Remove unwanted or add more ingredients",
+                    fontSize = 14.sp,
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
                 )
+            }
+            
+            Button(
+                onClick = { showSearchDialog = true },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.secondary
+                ),
+                modifier = Modifier.height(36.dp)
             ) {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(16.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    Text(
-                        text = "Ingredient not found",
-                        fontWeight = FontWeight.Medium,
-                        color = MaterialTheme.colorScheme.onSecondaryContainer
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Button(
-                        onClick = { showAddDialog = true },
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = MaterialTheme.colorScheme.primary
-                        )
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Add,
-                            contentDescription = null,
-                            modifier = Modifier.size(20.dp)
-                        )
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text("Add \"$searchQuery\" as new ingredient")
-                    }
-                }
+                Icon(Icons.Default.Add, "Add ingredient", modifier = Modifier.size(16.dp))
+                Spacer(modifier = Modifier.width(4.dp))
+                Text("Add", fontSize = 14.sp)
             }
         }
 
@@ -172,122 +126,163 @@ fun IngredientsScreen(
             modifier = Modifier.weight(1f),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            items(filteredIngredients) { ingredient ->
-                val isSelected = selectedIngredients.any { it.id == ingredient.id }
-
-                Card(
-                    onClick = { viewModel.toggleIngredient(ingredient) },
-                    modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = CardDefaults.cardColors(
-                        containerColor = if (isSelected)
-                            MaterialTheme.colorScheme.primaryContainer
-                        else
-                            MaterialTheme.colorScheme.surface
-                    )
-                ) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(16.dp),
-                        verticalAlignment = Alignment.CenterVertically
+            // Show all selected ingredients
+            val allSelectedIngredients = selectedIngredients.toList()
+            
+            if (allSelectedIngredients.isEmpty()) {
+                item {
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = CardDefaults.cardColors(
+                            containerColor = MaterialTheme.colorScheme.surfaceVariant
+                        )
                     ) {
-                        Checkbox(
-                            checked = isSelected,
-                            onCheckedChange = { viewModel.toggleIngredient(ingredient) },
-                            colors = CheckboxDefaults.colors(
-                                checkedColor = MaterialTheme.colorScheme.primary,
-                                uncheckedColor = MaterialTheme.colorScheme.onSurfaceVariant
+                        Column(
+                            modifier = Modifier.padding(16.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Text(
+                                text = "No ingredients selected",
+                                style = MaterialTheme.typography.bodyLarge,
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
                             )
+                            Text(
+                                text = "Tap 'Add More' to add ingredients",
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
+                            )
+                        }
+                    }
+                }
+            } else {
+                items(allSelectedIngredients) { ingredient ->
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = CardDefaults.cardColors(
+                            containerColor = MaterialTheme.colorScheme.secondaryContainer
                         )
-
-                        Text(
-                            text = ingredient.name,
-                            fontSize = 16.sp,
-                            fontWeight = FontWeight.Medium,
-                            color = if (isSelected)
-                                MaterialTheme.colorScheme.onPrimaryContainer
-                            else
-                                MaterialTheme.colorScheme.onSurface,
+                    ) {
+                        Row(
                             modifier = Modifier
-                                .weight(1f)
-                                .padding(start = 12.dp)
-                        )
+                                .fillMaxWidth()
+                                .padding(16.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(
+                                    text = ingredient,
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    fontWeight = FontWeight.Medium
+                                )
+                                // Show Swahili name
+                                selectedMeal?.let { meal ->
+                                    val tanzanianDish = TanzanianDishes.dishes.find { 
+                                        it.nameEnglish == meal.name || it.nameSwahili == meal.nameSwahili 
+                                    }
+                                    val swahiliName = tanzanianDish?.let { dish ->
+                                        val index = dish.ingredientsEnglish.indexOf(ingredient)
+                                        if (index != -1) dish.ingredientsSwahili[index] else null
+                                    }
+                                    if (swahiliName != null) {
+                                        Text(
+                                            text = swahiliName,
+                                            style = MaterialTheme.typography.bodyMedium,
+                                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
+                                        )
+                                    }
+                                }
+                            }
+
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                // Remove ingredient button
+                                IconButton(
+                                    onClick = {
+                                        viewModel.removeIngredient(ingredient)
+                                    }
+                                ) {
+                                    Icon(Icons.Default.Delete, "Remove ingredient")
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
 
-        // Selected ingredients count
-        if (selectedIngredients.isNotEmpty()) {
-            Text(
-                text = "${selectedIngredients.size} ingredients selected",
-                fontSize = 14.sp,
-                color = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.padding(vertical = 8.dp)
-            )
-        }
-
+        // Calculate Button
         Button(
-            onClick = onContinue,
-            enabled = selectedIngredients.isNotEmpty(),
+            onClick = {
+                onContinue()
+            },
             modifier = Modifier
                 .fillMaxWidth()
+                .padding(vertical = 16.dp)
                 .height(50.dp),
-            shape = RoundedCornerShape(25.dp)
+            enabled = true
         ) {
-            Text(
-                text = "Continue",
-                fontSize = 18.sp,
-                fontWeight = FontWeight.Medium
-            )
+            Text("Calculate Portions")
         }
     }
 
-    if (showAddDialog) {
-        var newIngredientName by remember { mutableStateOf(searchQuery) }
-        
+    // Search Dialog
+    if (showSearchDialog) {
         AlertDialog(
-            onDismissRequest = { showAddDialog = false },
-            title = { Text("Add New Ingredient") },
+            onDismissRequest = { showSearchDialog = false },
+            title = { Text("Add Ingredient") },
             text = {
                 Column {
-                    Text(
-                        text = "Add your own ingredient to the recipe",
-                        fontSize = 14.sp,
-                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
-                        modifier = Modifier.padding(bottom = 16.dp)
-                    )
                     OutlinedTextField(
-                        value = newIngredientName,
-                        onValueChange = { newIngredientName = it },
-                        label = { Text("Ingredient Name") },
+                        value = searchQuery,
+                        onValueChange = { searchQuery = it },
+                        label = { Text("Search ingredients") },
+                        leadingIcon = { Icon(Icons.Default.Search, "Search") },
                         singleLine = true,
                         modifier = Modifier.fillMaxWidth()
                     )
+                    
+                    Spacer(modifier = Modifier.height(16.dp))
+                    
+                    // Show filtered ingredients
+                    val filteredIngredients = allAvailableIngredients.filter { 
+                        it.contains(searchQuery, ignoreCase = true) && 
+                        !selectedIngredients.contains(it)
+                    }
+                    
+                    LazyColumn(
+                        modifier = Modifier.height(200.dp),
+                        verticalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
+                        items(filteredIngredients) { ingredient ->
+                            Card(
+                                modifier = Modifier.fillMaxWidth(),
+                                colors = CardDefaults.cardColors(
+                                    containerColor = MaterialTheme.colorScheme.surface
+                                )
+                            ) {
+                                TextButton(
+                                    onClick = {
+                                        viewModel.addIngredient(ingredient)
+                                        searchQuery = ""
+                                        showSearchDialog = false
+                                    },
+                                    modifier = Modifier.fillMaxWidth()
+                                ) {
+                                    Text(
+                                        text = ingredient,
+                                        modifier = Modifier.fillMaxWidth(),
+                                        textAlign = androidx.compose.ui.text.style.TextAlign.Start
+                                    )
+                                }
+                            }
+                        }
+                    }
                 }
             },
             confirmButton = {
-                TextButton(
-                    onClick = {
-                        if (newIngredientName.isNotBlank()) {
-                            val newIngredient = Ingredient(
-                                id = UUID.randomUUID().toString(),
-                                name = newIngredientName.trim(),
-                                preparationTime = 10 // default prep time
-                            )
-                            viewModel.addIngredient(newIngredient)
-                            viewModel.toggleIngredient(newIngredient)
-                            searchQuery = "" // Clear search after adding
-                            showAddDialog = false
-                        }
-                    }
-                ) {
-                    Text("Add")
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { showAddDialog = false }) {
+                TextButton(onClick = { showSearchDialog = false }) {
                     Text("Cancel")
                 }
             }

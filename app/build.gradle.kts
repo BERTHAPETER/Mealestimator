@@ -68,4 +68,13 @@ dependencies {
     
     // DataStore for storing API key
     implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+    // AppCompat for AppCompat themes and attributes
+    implementation("androidx.appcompat:appcompat:1.6.1")
+
+    // Accompanist system UI controller
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
+
+    // Coil for image loading
+    implementation("io.coil-kt:coil-compose:2.5.0")
 }

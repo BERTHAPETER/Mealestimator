@@ -29,12 +29,6 @@ fun MealTypeScreen(
         "Dinner" to "🌙"
     )
 
-    LaunchedEffect(selectedMeal) {
-        if (selectedMeal == null) {
-            showError = true
-        }
-    }
-
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -105,7 +99,7 @@ fun MealTypeScreen(
                 )
             ) {
                 Text(
-                    text = "Please select a meal first",
+                    text = "Please select a meal type",
                     color = MaterialTheme.colorScheme.onErrorContainer,
                     modifier = Modifier.padding(16.dp),
                     fontWeight = FontWeight.Medium
@@ -119,13 +113,9 @@ fun MealTypeScreen(
             mealTypes.forEach { (type, emoji) ->
                 Card(
                     onClick = { 
-                        if (selectedMeal != null) {
-                            selectedType = type
-                            showError = false
-                            viewModel.selectMealType(type)
-                        } else {
-                            showError = true
-                        }
+                        selectedType = type
+                        showError = false
+                        viewModel.setMealType(type)
                     },
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(12.dp),
@@ -180,14 +170,14 @@ fun MealTypeScreen(
 
         Button(
             onClick = {
-                if (selectedMeal != null && selectedType.isNotEmpty()) {
-                    viewModel.selectMealType(selectedType)
+                if (selectedType.isNotEmpty()) {
+                    viewModel.setMealType(selectedType)
                     onMealTypeSelected()
                 } else {
                     showError = true
                 }
             },
-            enabled = selectedType.isNotEmpty() && selectedMeal != null,
+            enabled = selectedType.isNotEmpty(),
             modifier = Modifier
                 .fillMaxWidth()
                 .height(50.dp),

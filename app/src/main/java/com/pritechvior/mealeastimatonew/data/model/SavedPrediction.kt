@@ -17,5 +17,6 @@ data class SavedIngredient(
     val name: String,
     val quantity: Double,
     val unit: String,
-    val isCustomQuantity: Boolean = false // true if user manually edited the quantity
+    val isOptional: Boolean = false,
+    val isCustomQuantity: Boolean = false
 ) 

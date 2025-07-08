@@ -10,5 +10,8 @@ data class IngredientPredictionRequest(
 data class IngredientPrediction(
     val ingredient: String,
     val quantity: Double,
-    val unit: String
+    val unit: String,
+    val energyKcal: Double = 0.0,
+    val proteinGrams: Double = 0.0,
+    val fatGrams: Double = 0.0
 ) 

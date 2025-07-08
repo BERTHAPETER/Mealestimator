@@ -5,5 +5,6 @@ data class Ingredient(
     val name: String,
     val preparationTime: Int, // in minutes
     val predictedQuantity: Double? = null,
-    val predictedUnit: String? = null
+    val predictedUnit: String? = null,
+    val isOptional: Boolean = false
 )

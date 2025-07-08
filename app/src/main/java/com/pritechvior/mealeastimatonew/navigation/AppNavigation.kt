@@ -1,5 +1,6 @@
 package com.pritechvior.mealeastimatonew.navigation
 
+import android.content.Context
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Person
@@ -7,6 +8,7 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -15,49 +17,42 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.compose.ui.graphics.Color
-import androidx.compose.foundation.layout.*
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.pritechvior.mealeastimatonew.ui.screens.*
 import com.pritechvior.mealeastimatonew.viewmodel.MealEstimatorViewModel
-import com.pritechvior.mealeastimatonew.viewmodel.UserViewModel
-
-// Bottom Navigation Items
-sealed class BottomNavItem(
-    val route: String,
-    val title: String,
-    val icon: String
-) {
-    object MealSelection : BottomNavItem("meal_selection", "Meals", "🍽️")
-    object MealType : BottomNavItem("meal_type", "Type", "📋")
-    object PeopleDetails : BottomNavItem("people_details", "People", "👥")
-    object Results : BottomNavItem("prediction_results", "Results", "📊")
-    object SavedPredictions : BottomNavItem("saved_predictions", "Saved", "💾")
-}
+import com.pritechvior.mealeastimatonew.viewmodel.MealEstimatorViewModelFactory
+import com.pritechvior.mealeastimatonew.navigation.Screen
+import com.pritechvior.mealeastimatonew.navigation.BottomNavItem
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AppNavigation(
-    navController: NavHostController = rememberNavController(),
-    viewModel: MealEstimatorViewModel = viewModel()
-) {
+fun AppNavigation() {
+    val navController = rememberNavController()
+    val context = LocalContext.current
+    val viewModel: MealEstimatorViewModel = viewModel(
+        factory = MealEstimatorViewModelFactory(context)
+    )
+
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
-    val userViewModel: UserViewModel = viewModel()
 
     // Routes that should show bottom navigation
     val bottomNavRoutes = listOf(
-        "meal_selection",
-        "meal_type",
-        "people_details",
-        "ingredients",
-        "prediction_results",
-        "saved_predictions"
+        Screen.MealSelection.route,
+        Screen.MealType.route,
+        Screen.PeopleDetails.route,
+        Screen.Ingredients.route,
+        Screen.Results.route,
+        Screen.SavedPredictions.route
     )
 
     val showBottomNav = currentDestination?.route in bottomNavRoutes
-    val showProfileIcon = viewModel.currentUser != null && currentDestination?.route != "profile"
+    val showProfileIcon = viewModel.currentUser != null && currentDestination?.route != Screen.Profile.route
     val currentRoute = currentDestination?.route
 
     Scaffold(
@@ -67,12 +62,12 @@ fun AppNavigation(
                     title = {
                         Text(
                             text = when (currentRoute) {
-                                "meal_selection" -> "Select Meal"
-                                "meal_type" -> "Meal Time"
-                                "people_details" -> "People Details"
-                                "ingredients" -> "Ingredients"
-                                "prediction_results" -> "Results"
-                                "saved_predictions" -> "Saved Meals"
+                                Screen.MealSelection.route -> "Select Meal"
+                                Screen.MealType.route -> "Meal Time"
+                                Screen.PeopleDetails.route -> "People Details"
+                                Screen.Ingredients.route -> "Select Ingredients"
+                                Screen.Results.route -> "Results"
+                                Screen.SavedPredictions.route -> "Saved Meals"
                                 else -> "Home Meal Estimator"
                             },
                             fontWeight = FontWeight.Bold,
@@ -80,7 +75,7 @@ fun AppNavigation(
                         )
                     },
                     navigationIcon = {
-                        if (currentRoute != "meal_selection") {
+                        if (currentRoute != Screen.MealSelection.route) {
                             IconButton(onClick = { navController.navigateUp() }) {
                                 Icon(
                                     imageVector = Icons.Default.ArrowBack,
@@ -92,7 +87,7 @@ fun AppNavigation(
                     },
                     actions = {
                         IconButton(
-                            onClick = { navController.navigate("profile") }
+                            onClick = { navController.navigate(Screen.Profile.route) }
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Person,
@@ -121,92 +116,104 @@ fun AppNavigation(
     ) { innerPadding ->
         NavHost(
             navController = navController,
-            startDestination = "welcome",
+            startDestination = Screen.Welcome.route,
             modifier = Modifier.padding(innerPadding)
         ) {
-            composable("welcome") {
+            composable(Screen.Welcome.route) {
                 WelcomeScreen(
                     onGetStarted = {
-                        navController.navigate("auth")
+                        navController.navigate(Screen.Auth.route)
                     }
                 )
             }
 
-            composable("auth") {
+            composable(Screen.Auth.route) {
                 AuthScreen(
                     onAuthSuccess = {
-                        navController.navigate("meal_selection") {
-                            popUpTo("welcome") { inclusive = true }
+                        navController.navigate(Screen.MealType.route) {
+                            popUpTo(Screen.Welcome.route) { inclusive = true }
                         }
                     },
-                    userViewModel = userViewModel
+                    viewModel = viewModel
                 )
             }
 
-            composable("profile") {
+            composable(Screen.Profile.route) {
                 ProfileScreen(
                     onLogout = {
-                        navController.navigate("welcome") {
+                        navController.navigate(Screen.Welcome.route) {
                             popUpTo(0) { inclusive = true }
                         }
                     },
-                    userViewModel = userViewModel
-                )
-            }
-
-            composable("meal_selection") {
-                MealSelectionScreen(
-                    onMealSelected = {
-                        navController.navigate("meal_type")
+                    onSettingsClick = {
+                        navController.navigate(Screen.Settings.route)
                     },
                     viewModel = viewModel
                 )
             }
 
-            composable("meal_type") {
+            composable(Screen.Settings.route) {
+                SettingsScreen(
+                    onNavigateBack = {
+                        navController.navigateUp()
+                    },
+                    viewModel = viewModel
+                )
+            }
+
+            composable(Screen.MealType.route) {
                 MealTypeScreen(
                     onMealTypeSelected = {
-                        navController.navigate("people_details")
+                        navController.navigate(Screen.MealSelection.route)
                     },
                     viewModel = viewModel
                 )
             }
 
-            composable("people_details") {
+            composable(Screen.MealSelection.route) {
+                MealSelectionScreen(
+                    onMealSelected = {
+                        navController.navigate(Screen.PeopleDetails.route)
+                    },
+                    viewModel = viewModel
+                )
+            }
+
+            composable(Screen.PeopleDetails.route) {
                 PeopleDetailsScreen(
                     onContinue = {
-                        navController.navigate("ingredients")
+                        navController.navigate(Screen.Ingredients.route)
                     },
                     viewModel = viewModel
                 )
             }
 
-            composable("ingredients") {
+            composable(Screen.Ingredients.route) {
                 IngredientsScreen(
                     onContinue = {
-                        navController.navigate("prediction_results")
+                        navController.navigate(Screen.Results.route)
                     },
                     viewModel = viewModel
                 )
             }
 
-            composable("prediction_results") {
-                PredictionResultsScreen(
-                    onStartOver = {
-                        viewModel.resetSession()
-                        navController.navigate("meal_selection") {
-                            popUpTo("meal_selection") { inclusive = true }
-                        }
+            composable(Screen.Results.route) {
+                ResultScreen(
+                    onBackClick = {
+                        navController.navigateUp()
                     },
-                    viewModel = viewModel
+                    viewModel = viewModel,
+                    onSaveClick = { viewModel.savePrediction() }
                 )
             }
 
-            composable("saved_predictions") {
+            composable(Screen.SavedPredictions.route) {
                 SavedPredictionsScreen(
                     onEditPrediction = { predictionId ->
-                        viewModel.loadSavedPrediction(predictionId)
-                        navController.navigate("ingredients")
+                        CoroutineScope(Dispatchers.Main).launch {
+                            viewModel.loadSavedPrediction(predictionId)
+                            navController.navigate(Screen.Ingredients.route)
+                        }
                     },
                     viewModel = viewModel
                 )
@@ -216,15 +223,16 @@ fun AppNavigation(
 }
 
 @Composable
-fun BottomNavigationBar(
+private fun BottomNavigationBar(
     navController: NavHostController,
     currentDestination: String?
 ) {
     NavigationBar {
         val items = listOf(
-            BottomNavItem.MealSelection,
             BottomNavItem.MealType,
+            BottomNavItem.MealSelection,
             BottomNavItem.PeopleDetails,
+            BottomNavItem.Ingredients,
             BottomNavItem.Results,
             BottomNavItem.SavedPredictions
         )
@@ -236,11 +244,14 @@ fun BottomNavigationBar(
                 selected = currentDestination == item.route,
                 onClick = {
                     navController.navigate(item.route) {
-                        popUpTo(navController.graph.startDestinationId)
+                        popUpTo(navController.graph.findStartDestination().id) {
+                            saveState = true
+                        }
                         launchSingleTop = true
+                        restoreState = true
                     }
                 }
             )
         }
     }
-}
+} 

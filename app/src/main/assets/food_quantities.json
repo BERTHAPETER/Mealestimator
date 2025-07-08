@@ -1,0 +1,4125 @@
+{
+  "metadata": {
+    "title": "Tanzanian Food Portions Database",
+    "description": "Food portions database with Kiswahili and English names, portion sizes and measurements",
+    "size_codes": {
+      "VS": "Very small",
+      "S": "Small size",
+      "M": "Medium size", 
+      "L": "Large",
+      "VL": "Very Large",
+      "Std": "Standard",
+      "A": "Adult average portion"
+    },
+    "measurement_units": {
+      "u1": "bowl",
+      "u2": "glass", 
+      "u3": "cup",
+      "u4": "plate",
+      "u5": "tbsp",
+      "u6": "tsp",
+      "u7": "saucer",
+      "u8": "unit",
+      "u10": "Average"
+    }
+  },
+  "foods": [
+    
+  {
+    "code": 10,
+    "name_kiswahili": "mahindi yaliyokobolewa",
+    "name_english": "Maize dehulled",
+    "portions": [
+      {
+        "size": "Std",
+        "plate": 450,
+        "saucer": 150
+      }
+    ]
+  },
+  {
+    "code": 13,
+    "name_kiswahili": "mahindi mabichi",
+    "name_english": "Maize green",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 100
+      },
+      {
+        "size": "M",
+        "unit": 350
+      },
+      {
+        "size": "A",
+        "average": 225
+      }
+    ]
+  },
+  {
+    "code": 14,
+    "name_kiswahili": "mahindi kwenye gunzi",
+    "name_english": "Maize on cob",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 100
+      },
+      {
+        "size": "M",
+        "unit": 350
+      },
+      {
+        "size": "A",
+        "average": 225
+      }
+    ]
+  },
+  {
+    "code": 21,
+    "name_kiswahili": "wali",
+    "name_english": "Rice cooked",
+    "portions": [
+      {
+        "size": "Std",
+        "plate": 450,
+        "saucer": 175
+      },
+      {
+        "size": "A",
+        "average": 315
+      }
+    ]
+  },
+  {
+    "code": 101,
+    "name_kiswahili": "parachichi",
+    "name_english": "Avocado",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 150
+      },
+      {
+        "size": "M",
+        "unit": 200
+      },
+      {
+        "size": "L",
+        "unit": 500
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 102,
+    "name_kiswahili": "ndizimbivu",
+    "name_english": "Banana ripe",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 50
+      },
+      {
+        "size": "M",
+        "unit": 115
+      },
+      {
+        "size": "L",
+        "unit": 175
+      },
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 103,
+    "name_kiswahili": "ubuyu",
+    "name_english": "Baobab fruit",
+    "portions": [
+      {
+        "size": "Std",
+        "cup": 150,
+        "saucer": 10
+      },
+      {
+        "size": "A",
+        "average": 50
+      }
+    ]
+  },
+  {
+    "code": 104,
+    "name_kiswahili": "zabibu",
+    "name_english": "Grape",
+    "portions": [
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 106,
+    "name_kiswahili": "mapera",
+    "name_english": "Guava",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 60
+      },
+      {
+        "size": "M",
+        "unit": 100
+      },
+      {
+        "size": "L",
+        "unit": 150
+      },
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 107,
+    "name_kiswahili": "mafenesi",
+    "name_english": "Jack fruit",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 50
+      },
+      {
+        "size": "M",
+        "unit": 150
+      },
+      {
+        "size": "L",
+        "unit": 250
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 108,
+    "name_kiswahili": "juisi ya machungwa",
+    "name_english": "Orange juice",
+    "portions": [
+      {
+        "size": "Std",
+        "glass": 200
+      },
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 109,
+    "name_kiswahili": "ndimu",
+    "name_english": "Lemon",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 70
+      },
+      {
+        "size": "A",
+        "average": 15
+      }
+    ]
+  },
+  {
+    "code": 110,
+    "name_kiswahili": "limau",
+    "name_english": "Lime",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 30
+      },
+      {
+        "size": "A",
+        "average": 15
+      }
+    ]
+  },
+  {
+    "code": 111,
+    "name_kiswahili": "juisi ya maembe",
+    "name_english": "Mango juice",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 200
+      },
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 112,
+    "name_kiswahili": "maembe",
+    "name_english": "Mango",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 120
+      },
+      {
+        "size": "M",
+        "unit": 155
+      },
+      {
+        "size": "L",
+        "unit": 270
+      },
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 113,
+    "name_kiswahili": "embe mbichi",
+    "name_english": "Mango unripe",
+    "portions": [
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 114,
+    "name_kiswahili": "chungwa",
+    "name_english": "Orange",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 120
+      },
+      {
+        "size": "M",
+        "unit": 170
+      },
+      {
+        "size": "L",
+        "unit": 200
+      },
+      {
+        "size": "A",
+        "average": 160
+      }
+    ]
+  },
+  {
+    "code": 115,
+    "name_kiswahili": "papai",
+    "name_english": "Pawpaw",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 250
+      },
+      {
+        "size": "M",
+        "unit": 300
+      },
+      {
+        "size": "L",
+        "unit": 650
+      },
+      {
+        "size": "A",
+        "average": 400
+      }
+    ]
+  },
+  {
+    "code": 116,
+    "name_kiswahili": "papai bichi",
+    "name_english": "Pawpaw unripe",
+    "portions": [
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 117,
+    "name_kiswahili": "pesheni",
+    "name_english": "Passion fruit",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 60
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 118,
+    "name_kiswahili": "mapeasi",
+    "name_english": "Pears standard",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 275
+      },
+      {
+        "size": "A",
+        "average": 275
+      }
+    ]
+  },
+  {
+    "code": 119,
+    "name_kiswahili": "nanasi",
+    "name_english": "Pineapple",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 100
+      },
+      {
+        "size": "M",
+        "unit": 190
+      },
+      {
+        "size": "L",
+        "unit": 550
+      },
+      {
+        "size": "A",
+        "average": 400
+      }
+    ]
+  },
+  {
+    "code": 120,
+    "name_kiswahili": "juisi ya nanasi",
+    "name_english": "Pineapple juice",
+    "portions": [
+      {
+        "size": "Std",
+        "glass": 200
+      },
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 121,
+    "name_kiswahili": "matunda damu",
+    "name_english": "Plums",
+    "portions": [
+      {
+        "size": "Std",
+        "glass": 200
+      },
+      {
+        "size": "A",
+        "average": 125
+      }
+    ]
+  },
+  {
+    "code": 122,
+    "name_kiswahili": "ukwaju - kavu",
+    "name_english": "Tamarind dry",
+    "portions": [
+      {
+        "size": "Std",
+        "cup": 150,
+        "tbsp": 30
+      },
+      {
+        "size": "A",
+        "average": 60
+      }
+    ]
+  },
+  {
+    "code": 123,
+    "name_kiswahili": "ukwaju - mbichi",
+    "name_english": "Tamarind fresh",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 20
+      },
+      {
+        "size": "A",
+        "average": 60
+      }
+    ]
+  },
+  {
+    "code": 124,
+    "name_kiswahili": "machenza",
+    "name_english": "Tangerine",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 40
+      },
+      {
+        "size": "M",
+        "unit": 70
+      },
+      {
+        "size": "L",
+        "unit": 100
+      },
+      {
+        "size": "A",
+        "average": 70
+      }
+    ]
+  },
+  {
+    "code": 125,
+    "name_kiswahili": "tikiti maji",
+    "name_english": "Water melon",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 100
+      },
+      {
+        "size": "M",
+        "unit": 200
+      },
+      {
+        "size": "L",
+        "unit": 400
+      },
+      {
+        "size": "A",
+        "average": 230
+      }
+    ]
+  },
+  {
+    "code": 126,
+    "name_kiswahili": "jusi ya pensheni",
+    "name_english": "Passion Juice",
+    "portions": [
+      {
+        "size": "Std",
+        "glass": 200
+      },
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 127,
+    "name_kiswahili": "pichi",
+    "name_english": "Peaches",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 60
+      },
+      {
+        "size": "M",
+        "unit": 80
+      },
+      {
+        "size": "L",
+        "unit": 150
+      },
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 128,
+    "name_kiswahili": "rasiberi",
+    "name_english": "Raspberry",
+    "portions": [
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 129,
+    "name_kiswahili": "tofaa",
+    "name_english": "apple",
+    "portions": [
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 157,
+    "name_kiswahili": "korosho",
+    "name_english": "cashewnuts",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 100
+      }
+    ]
+  },
+  {
+    "code": 160,
+    "name_kiswahili": "maji ya madafu",
+    "name_english": "coconut water immature",
+    "portions": [
+      {
+        "size": "A",
+        "average": 300
+      }
+    ]
+  },
+  {
+    "code": 164,
+    "name_kiswahili": "karanga",
+    "name_english": "Groundnuts",
+    "portions": [
+      {
+        "size": "Std",
+        "saucer": 20
+      },
+      {
+        "size": "A",
+        "average": 50
+      }
+    ]
+  },
+  {
+    "code": 165,
+    "name_kiswahili": "mbaazi",
+    "name_english": "Pigeon peas",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 500,
+        "saucer": 200
+      },
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 166,
+    "name_kiswahili": "mbaazi mbichi",
+    "name_english": "pigeon peas-green",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 400,
+        "saucer": 200
+      },
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 169,
+    "name_kiswahili": "mbegu ya alizeti",
+    "name_english": "sunflower seeds",
+    "portions": [
+      {
+        "size": "A",
+        "average": 10
+      }
+    ]
+  },
+  {
+    "code": 201,
+    "name_kiswahili": "kipande cha maini",
+    "name_english": "Liver piece",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 50
+      },
+      {
+        "size": "M",
+        "unit": 80
+      },
+      {
+        "size": "L",
+        "unit": 180
+      },
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 202,
+    "name_kiswahili": "kipande nyama ya ngombe",
+    "name_english": "Beef - piece",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 12
+      },
+      {
+        "size": "M",
+        "unit": 25
+      },
+      {
+        "size": "L",
+        "unit": 50
+      },
+      {
+        "size": "A",
+        "average": 30
+      }
+    ]
+  },
+  {
+    "code": 206,
+    "name_kiswahili": "maini ya kuku",
+    "name_english": "Chicken liver",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 60
+      },
+      {
+        "size": "A",
+        "average": 60
+      }
+    ]
+  },
+  {
+    "code": 207,
+    "name_kiswahili": "kuku wa kukaanga",
+    "name_english": "Chicken fried",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 50
+      },
+      {
+        "size": "M",
+        "unit": 100
+      },
+      {
+        "size": "L",
+        "unit": 200
+      },
+      {
+        "size": "A",
+        "average": 120
+      }
+    ]
+  },
+  {
+    "code": 251,
+    "name_kiswahili": "aiskrimu",
+    "name_english": "Icecream",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 100
+      },
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 253,
+    "name_kiswahili": "maziwa mazito ya kopo yenye sukari",
+    "name_english": "Milk condensed",
+    "portions": [
+      {
+        "size": "A",
+        "average": 15
+      }
+    ]
+  },
+  {
+    "code": 254,
+    "name_kiswahili": "maziwa ya unga",
+    "name_english": "Milk powder",
+    "portions": [
+      {
+        "size": "A",
+        "average": 10
+      }
+    ]
+  },
+  {
+    "code": 255,
+    "name_kiswahili": "maziwa yasiyoenguliwa",
+    "name_english": "Whole Milk",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 200,
+        "cup": 150
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 307,
+    "name_kiswahili": "mayai",
+    "name_english": "Egg",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 70
+      },
+      {
+        "size": "A",
+        "average": 70
+      }
+    ]
+  },
+  {
+    "code": 308,
+    "name_kiswahili": "samaki wa kukausha",
+    "name_english": "Fish dried",
+    "portions": [
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 313,
+    "name_kiswahili": "dagaa",
+    "name_english": "Small dried fish",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 200,
+        "cup": 100,
+        "saucer": 70
+      },
+      {
+        "size": "A",
+        "average": 70
+      }
+    ]
+  },
+  {
+    "code": 315,
+    "name_kiswahili": "nyama ya mbuzi",
+    "name_english": "Goat meat",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 12
+      },
+      {
+        "size": "M",
+        "unit": 25
+      },
+      {
+        "size": "L",
+        "unit": 50
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 317,
+    "name_kiswahili": "nyama ya nguruwe",
+    "name_english": "Pork",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 12
+      },
+      {
+        "size": "M",
+        "unit": 25
+      },
+      {
+        "size": "L",
+        "unit": 50
+      }
+    ]
+  },
+  {
+    "code": 318,
+    "name_kiswahili": "soseji",
+    "name_english": "Sausage",
+    "portions": [
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 319,
+    "name_kiswahili": "samaki wa kukausha kwa moshi",
+    "name_english": "Fish smoked",
+    "portions": [
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 353,
+    "name_kiswahili": "viazi mviringo",
+    "name_english": "Potato",
+    "portions": [
+      {
+        "size": "S",
+        "plate": 300,
+        "saucer": 150
+      },
+      {
+        "size": "M",
+        "unit": 25
+      },
+      {
+        "size": "L",
+        "unit": 50
+      },
+      {
+        "size": "VL",
+        "unit": 100
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 356,
+    "name_kiswahili": "maghimbi",
+    "name_english": "Taro",
+    "portions": [
+      {
+        "size": "Std",
+        "plate": 400,
+        "saucer": 200
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 361,
+    "name_kiswahili": "viazi vitamu",
+    "name_english": "Sweet potato",
+    "portions": [
+      {
+        "size": "Std",
+        "plate": 400,
+        "saucer": 200
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 403,
+    "name_kiswahili": "kabichi nyeupe",
+    "name_english": "cabbage raw white",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 60
+      },
+      {
+        "size": "A",
+        "average": 60
+      }
+    ]
+  },
+  {
+    "code": 404,
+    "name_kiswahili": "karoti",
+    "name_english": "Carrot",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 70
+      },
+      {
+        "size": "M",
+        "unit": 85
+      },
+      {
+        "size": "L",
+        "unit": 110
+      },
+      {
+        "size": "A",
+        "average": 50
+      }
+    ]
+  },
+  {
+    "code": 407,
+    "name_kiswahili": "matango",
+    "name_english": "Cucumber",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 50
+      },
+      {
+        "size": "M",
+        "unit": 100
+      },
+      {
+        "size": "L",
+        "unit": 150
+      },
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 408,
+    "name_kiswahili": "biringanya",
+    "name_english": "Egg plant",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 250,
+        "saucer": 125
+      },
+      {
+        "size": "A",
+        "average": 125
+      }
+    ]
+  },
+  {
+    "code": 415,
+    "name_kiswahili": "uyoga",
+    "name_english": "Mushroom",
+    "portions": [
+      {
+        "size": "Std",
+        "saucer": 20
+      },
+      {
+        "size": "A",
+        "average": 20
+      }
+    ]
+  },
+  {
+    "code": 416,
+    "name_kiswahili": "bamia",
+    "name_english": "Okra",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 15
+      },
+      {
+        "size": "M",
+        "bowl": 225,
+        "saucer": 175
+      },
+      {
+        "size": "A",
+        "average": 235
+      }
+    ]
+  },
+  {
+    "code": 417,
+    "name_kiswahili": "kitunguu",
+    "name_english": "Onion",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 25
+      },
+      {
+        "size": "M",
+        "unit": 40
+      },
+      {
+        "size": "L",
+        "unit": 70
+      },
+      {
+        "size": "VL",
+        "unit": 100
+      },
+      {
+        "size": "A",
+        "average": 30
+      }
+    ]
+  },
+  {
+    "code": 418,
+    "name_kiswahili": "njegere",
+    "name_english": "Green peas",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 400,
+        "saucer": 200
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 419,
+    "name_kiswahili": "boga",
+    "name_english": "Pumpkin",
+    "portions": [
+      {
+        "size": "Std",
+        "plate": 400,
+        "saucer": 200
+      },
+      {
+        "size": "A",
+        "unit": 80,
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 421,
+    "name_kiswahili": "nyanya chungu",
+    "name_english": "African eggplant",
+    "portions": [
+      {
+        "size": "S",
+        "saucer": 100
+      },
+      {
+        "size": "A",
+        "average": 75
+      }
+    ]
+  },
+  {
+    "code": 423,
+    "name_kiswahili": "nyanya",
+    "name_english": "Tomato",
+    "portions": [
+      {
+        "size": "VS",
+        "unit": 35
+      },
+      {
+        "size": "S",
+        "unit": 60
+      },
+      {
+        "size": "M",
+        "unit": 100
+      },
+      {
+        "size": "L",
+        "unit": 200
+      },
+      {
+        "size": "A",
+        "average": 65
+      }
+    ]
+  },
+  {
+    "code": 429,
+    "name_kiswahili": "pilipili hoho",
+    "name_english": "Green pepper",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 60
+      },
+      {
+        "size": "M",
+        "unit": 100
+      },
+      {
+        "size": "L",
+        "unit": 150
+      },
+      {
+        "size": "A",
+        "average": 50
+      }
+    ]
+  },
+  {
+    "code": 432,
+    "name_kiswahili": "saladi",
+    "name_english": "Salad green",
+    "portions": [
+      {
+        "size": "A",
+        "average": 30
+      }
+    ]
+  },
+  {
+    "code": 451,
+    "name_kiswahili": "bia",
+    "name_english": "Beer",
+    "portions": [
+      {
+        "size": "Std",
+        "glass": 250,
+        "cup": 200,
+        "unit": 500
+      },
+      {
+        "size": "A",
+        "average": 500
+      }
+    ]
+  },
+  {
+    "code": 452,
+    "name_kiswahili": "pombe ya kienyeji",
+    "name_english": "Local brew",
+    "portions": [
+      {
+        "size": "A",
+        "average": 500
+      }
+    ]
+  },
+  {
+    "code": 455,
+    "name_kiswahili": "chocolate",
+    "name_english": "Candy chocolate",
+    "portions": [
+      {
+        "size": "A",
+        "average": 40
+      }
+    ]
+  },
+  {
+    "code": 458,
+    "name_kiswahili": "soda",
+    "name_english": "Carbonated drink",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 350
+      },
+      {
+        "size": "A",
+        "average": 250
+      }
+    ]
+  },
+  {
+    "code": 460,
+    "name_kiswahili": "senene",
+    "name_english": "Cricket",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 100
+      },
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 461,
+    "name_kiswahili": "asali",
+    "name_english": "Honey",
+    "portions": [
+      {
+        "size": "A",
+        "unit": 10
+      }
+    ]
+  },
+  {
+    "code": 462,
+    "name_kiswahili": "maji ya matunda yoyote",
+    "name_english": "Any fruit juice",
+    "portions": [
+      {
+        "size": "Std",
+        "glass": 250
+      },
+      {
+        "size": "A",
+        "average": 250
+      }
+    ]
+  },
+  [
+  {
+    "code": 10,
+    "name_kiswahili": "mahindi yaliyokobolewa",
+    "name_english": "Maize dehulled",
+    "portions": [
+      {
+        "size": "Std",
+        "plate": 450,
+        "saucer": 150
+      }
+    ]
+  },
+  {
+    "code": 13,
+    "name_kiswahili": "mahindi mabichi",
+    "name_english": "Maize green",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 100
+      },
+      {
+        "size": "M",
+        "unit": 350
+      },
+      {
+        "size": "A",
+        "average": 225
+      }
+    ]
+  },
+  {
+    "code": 14,
+    "name_kiswahili": "mahindi kwenye gunzi",
+    "name_english": "Maize on cob",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 100
+      },
+      {
+        "size": "M",
+        "unit": 350
+      },
+      {
+        "size": "A",
+        "average": 225
+      }
+    ]
+  },
+  {
+    "code": 21,
+    "name_kiswahili": "wali",
+    "name_english": "Rice cooked",
+    "portions": [
+      {
+        "size": "Std",
+        "plate": 450,
+        "saucer": 175
+      },
+      {
+        "size": "A",
+        "average": 315
+      }
+    ]
+  },
+  {
+    "code": 101,
+    "name_kiswahili": "parachichi",
+    "name_english": "Avocado",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 150
+      },
+      {
+        "size": "M",
+        "unit": 200
+      },
+      {
+        "size": "L",
+        "unit": 500
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 102,
+    "name_kiswahili": "ndizimbivu",
+    "name_english": "Banana ripe",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 50
+      },
+      {
+        "size": "M",
+        "unit": 115
+      },
+      {
+        "size": "L",
+        "unit": 175
+      },
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 103,
+    "name_kiswahili": "ubuyu",
+    "name_english": "Baobab fruit",
+    "portions": [
+      {
+        "size": "Std",
+        "cup": 150,
+        "saucer": 10
+      },
+      {
+        "size": "A",
+        "average": 50
+      }
+    ]
+  },
+  {
+    "code": 104,
+    "name_kiswahili": "zabibu",
+    "name_english": "Grape",
+    "portions": [
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 106,
+    "name_kiswahili": "mapera",
+    "name_english": "Guava",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 60
+      },
+      {
+        "size": "M",
+        "unit": 100
+      },
+      {
+        "size": "L",
+        "unit": 150
+      },
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 107,
+    "name_kiswahili": "mafenesi",
+    "name_english": "Jack fruit",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 50
+      },
+      {
+        "size": "M",
+        "unit": 150
+      },
+      {
+        "size": "L",
+        "unit": 250
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 108,
+    "name_kiswahili": "juisi ya machungwa",
+    "name_english": "Orange juice",
+    "portions": [
+      {
+        "size": "Std",
+        "glass": 200
+      },
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 109,
+    "name_kiswahili": "ndimu",
+    "name_english": "Lemon",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 70
+      },
+      {
+        "size": "A",
+        "average": 15
+      }
+    ]
+  },
+  {
+    "code": 110,
+    "name_kiswahili": "limau",
+    "name_english": "Lime",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 30
+      },
+      {
+        "size": "A",
+        "average": 15
+      }
+    ]
+  },
+  {
+    "code": 111,
+    "name_kiswahili": "juisi ya maembe",
+    "name_english": "Mango juice",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 200
+      },
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 112,
+    "name_kiswahili": "maembe",
+    "name_english": "Mango",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 120
+      },
+      {
+        "size": "M",
+        "unit": 155
+      },
+      {
+        "size": "L",
+        "unit": 270
+      },
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 113,
+    "name_kiswahili": "embe mbichi",
+    "name_english": "Mango unripe",
+    "portions": [
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 114,
+    "name_kiswahili": "chungwa",
+    "name_english": "Orange",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 120
+      },
+      {
+        "size": "M",
+        "unit": 170
+      },
+      {
+        "size": "L",
+        "unit": 200
+      },
+      {
+        "size": "A",
+        "average": 160
+      }
+    ]
+  },
+  {
+    "code": 115,
+    "name_kiswahili": "papai",
+    "name_english": "Pawpaw",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 250
+      },
+      {
+        "size": "M",
+        "unit": 300
+      },
+      {
+        "size": "L",
+        "unit": 650
+      },
+      {
+        "size": "A",
+        "average": 400
+      }
+    ]
+  },
+  {
+    "code": 116,
+    "name_kiswahili": "papai bichi",
+    "name_english": "Pawpaw unripe",
+    "portions": [
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 117,
+    "name_kiswahili": "pesheni",
+    "name_english": "Passion fruit",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 60
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 118,
+    "name_kiswahili": "mapeasi",
+    "name_english": "Pears standard",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 275
+      },
+      {
+        "size": "A",
+        "average": 275
+      }
+    ]
+  },
+  {
+    "code": 119,
+    "name_kiswahili": "nanasi",
+    "name_english": "Pineapple",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 100
+      },
+      {
+        "size": "M",
+        "unit": 190
+      },
+      {
+        "size": "L",
+        "unit": 550
+      },
+      {
+        "size": "A",
+        "average": 400
+      }
+    ]
+  },
+  {
+    "code": 120,
+    "name_kiswahili": "juisi ya nanasi",
+    "name_english": "Pineapple juice",
+    "portions": [
+      {
+        "size": "Std",
+        "glass": 200
+      },
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 121,
+    "name_kiswahili": "matunda damu",
+    "name_english": "Plums",
+    "portions": [
+      {
+        "size": "Std",
+        "glass": 200
+      },
+      {
+        "size": "A",
+        "average": 125
+      }
+    ]
+  },
+  {
+    "code": 122,
+    "name_kiswahili": "ukwaju - kavu",
+    "name_english": "Tamarind dry",
+    "portions": [
+      {
+        "size": "Std",
+        "cup": 150,
+        "tbsp": 30
+      },
+      {
+        "size": "A",
+        "average": 60
+      }
+    ]
+  },
+  {
+    "code": 123,
+    "name_kiswahili": "ukwaju - mbichi",
+    "name_english": "Tamarind fresh",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 20
+      },
+      {
+        "size": "A",
+        "average": 60
+      }
+    ]
+  },
+  {
+    "code": 124,
+    "name_kiswahili": "machenza",
+    "name_english": "Tangerine",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 40
+      },
+      {
+        "size": "M",
+        "unit": 70
+      },
+      {
+        "size": "L",
+        "unit": 100
+      },
+      {
+        "size": "A",
+        "average": 70
+      }
+    ]
+  },
+  {
+    "code": 125,
+    "name_kiswahili": "tikiti maji",
+    "name_english": "Water melon",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 100
+      },
+      {
+        "size": "M",
+        "unit": 200
+      },
+      {
+        "size": "L",
+        "unit": 400
+      },
+      {
+        "size": "A",
+        "average": 230
+      }
+    ]
+  },
+  {
+    "code": 126,
+    "name_kiswahili": "jusi ya pensheni",
+    "name_english": "Passion Juice",
+    "portions": [
+      {
+        "size": "Std",
+        "glass": 200
+      },
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 127,
+    "name_kiswahili": "pichi",
+    "name_english": "Peaches",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 60
+      },
+      {
+        "size": "M",
+        "unit": 80
+      },
+      {
+        "size": "L",
+        "unit": 150
+      },
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 128,
+    "name_kiswahili": "rasiberi",
+    "name_english": "Raspberry",
+    "portions": [
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 129,
+    "name_kiswahili": "tofaa",
+    "name_english": "apple",
+    "portions": [
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 157,
+    "name_kiswahili": "korosho",
+    "name_english": "cashewnuts",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 100
+      }
+    ]
+  },
+  {
+    "code": 160,
+    "name_kiswahili": "maji ya madafu",
+    "name_english": "coconut water immature",
+    "portions": [
+      {
+        "size": "A",
+        "average": 300
+      }
+    ]
+  },
+  {
+    "code": 164,
+    "name_kiswahili": "karanga",
+    "name_english": "Groundnuts",
+    "portions": [
+      {
+        "size": "Std",
+        "saucer": 20
+      },
+      {
+        "size": "A",
+        "average": 50
+      }
+    ]
+  },
+  {
+    "code": 165,
+    "name_kiswahili": "mbaazi",
+    "name_english": "Pigeon peas",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 500,
+        "saucer": 200
+      },
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 166,
+    "name_kiswahili": "mbaazi mbichi",
+    "name_english": "pigeon peas-green",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 400,
+        "saucer": 200
+      },
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 169,
+    "name_kiswahili": "mbegu ya alizeti",
+    "name_english": "sunflower seeds",
+    "portions": [
+      {
+        "size": "A",
+        "average": 10
+      }
+    ]
+  },
+  {
+    "code": 201,
+    "name_kiswahili": "kipande cha maini",
+    "name_english": "Liver piece",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 50
+      },
+      {
+        "size": "M",
+        "unit": 80
+      },
+      {
+        "size": "L",
+        "unit": 180
+      },
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 202,
+    "name_kiswahili": "kipande nyama ya ngombe",
+    "name_english": "Beef - piece",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 12
+      },
+      {
+        "size": "M",
+        "unit": 25
+      },
+      {
+        "size": "L",
+        "unit": 50
+      },
+      {
+        "size": "A",
+        "average": 30
+      }
+    ]
+  },
+  {
+    "code": 206,
+    "name_kiswahili": "maini ya kuku",
+    "name_english": "Chicken liver",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 60
+      },
+      {
+        "size": "A",
+        "average": 60
+      }
+    ]
+  },
+  {
+    "code": 207,
+    "name_kiswahili": "kuku wa kukaanga",
+    "name_english": "Chicken fried",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 50
+      },
+      {
+        "size": "M",
+        "unit": 100
+      },
+      {
+        "size": "L",
+        "unit": 200
+      },
+      {
+        "size": "A",
+        "average": 120
+      }
+    ]
+  },
+  {
+    "code": 251,
+    "name_kiswahili": "aiskrimu",
+    "name_english": "Icecream",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 100
+      },
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 253,
+    "name_kiswahili": "maziwa mazito ya kopo yenye sukari",
+    "name_english": "Milk condensed",
+    "portions": [
+      {
+        "size": "A",
+        "average": 15
+      }
+    ]
+  },
+  {
+    "code": 254,
+    "name_kiswahili": "maziwa ya unga",
+    "name_english": "Milk powder",
+    "portions": [
+      {
+        "size": "A",
+        "average": 10
+      }
+    ]
+  },
+  {
+    "code": 255,
+    "name_kiswahili": "maziwa yasiyoenguliwa",
+    "name_english": "Whole Milk",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 200,
+        "cup": 150
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 307,
+    "name_kiswahili": "mayai",
+    "name_english": "Egg",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 70
+      },
+      {
+        "size": "A",
+        "average": 70
+      }
+    ]
+  },
+  {
+    "code": 308,
+    "name_kiswahili": "samaki wa kukausha",
+    "name_english": "Fish dried",
+    "portions": [
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 313,
+    "name_kiswahili": "dagaa",
+    "name_english": "Small dried fish",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 200,
+        "cup": 100,
+        "saucer": 70
+      },
+      {
+        "size": "A",
+        "average": 70
+      }
+    ]
+  },
+  {
+    "code": 315,
+    "name_kiswahili": "nyama ya mbuzi",
+    "name_english": "Goat meat",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 12
+      },
+      {
+        "size": "M",
+        "unit": 25
+      },
+      {
+        "size": "L",
+        "unit": 50
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 317,
+    "name_kiswahili": "nyama ya nguruwe",
+    "name_english": "Pork",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 12
+      },
+      {
+        "size": "M",
+        "unit": 25
+      },
+      {
+        "size": "L",
+        "unit": 50
+      }
+    ]
+  },
+  {
+    "code": 318,
+    "name_kiswahili": "soseji",
+    "name_english": "Sausage",
+    "portions": [
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 319,
+    "name_kiswahili": "samaki wa kukausha kwa moshi",
+    "name_english": "Fish smoked",
+    "portions": [
+      {
+        "size": "A",
+        "average": 200
+      }
+    ]
+  },
+  {
+    "code": 353,
+    "name_kiswahili": "viazi mviringo",
+    "name_english": "Potato",
+    "portions": [
+      {
+        "size": "S",
+        "plate": 300,
+        "saucer": 150
+      },
+      {
+        "size": "M",
+        "unit": 25
+      },
+      {
+        "size": "L",
+        "unit": 50
+      },
+      {
+        "size": "VL",
+        "unit": 100
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 356,
+    "name_kiswahili": "maghimbi",
+    "name_english": "Taro",
+    "portions": [
+      {
+        "size": "Std",
+        "plate": 400,
+        "saucer": 200
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 361,
+    "name_kiswahili": "viazi vitamu",
+    "name_english": "Sweet potato",
+    "portions": [
+      {
+        "size": "Std",
+        "plate": 400,
+        "saucer": 200
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 403,
+    "name_kiswahili": "kabichi nyeupe",
+    "name_english": "cabbage raw white",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 60
+      },
+      {
+        "size": "A",
+        "average": 60
+      }
+    ]
+  },
+  {
+    "code": 404,
+    "name_kiswahili": "karoti",
+    "name_english": "Carrot",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 70
+      },
+      {
+        "size": "M",
+        "unit": 85
+      },
+      {
+        "size": "L",
+        "unit": 110
+      },
+      {
+        "size": "A",
+        "average": 50
+      }
+    ]
+  },
+  {
+    "code": 407,
+    "name_kiswahili": "matango",
+    "name_english": "Cucumber",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 50
+      },
+      {
+        "size": "M",
+        "unit": 100
+      },
+      {
+        "size": "L",
+        "unit": 150
+      },
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 408,
+    "name_kiswahili": "biringanya",
+    "name_english": "Egg plant",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 250,
+        "saucer": 125
+      },
+      {
+        "size": "A",
+        "average": 125
+      }
+    ]
+  },
+  {
+    "code": 415,
+    "name_kiswahili": "uyoga",
+    "name_english": "Mushroom",
+    "portions": [
+      {
+        "size": "Std",
+        "saucer": 20
+      },
+      {
+        "size": "A",
+        "average": 20
+      }
+    ]
+  },
+  {
+    "code": 416,
+    "name_kiswahili": "bamia",
+    "name_english": "Okra",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 15
+      },
+      {
+        "size": "M",
+        "bowl": 225,
+        "saucer": 175
+      },
+      {
+        "size": "A",
+        "average": 235
+      }
+    ]
+  },
+  {
+    "code": 417,
+    "name_kiswahili": "kitunguu",
+    "name_english": "Onion",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 25
+      },
+      {
+        "size": "M",
+        "unit": 40
+      },
+      {
+        "size": "L",
+        "unit": 70
+      },
+      {
+        "size": "VL",
+        "unit": 100
+      },
+      {
+        "size": "A",
+        "average": 30
+      }
+    ]
+  },
+  {
+    "code": 418,
+    "name_kiswahili": "njegere",
+    "name_english": "Green peas",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 400,
+        "saucer": 200
+      },
+      {
+        "size": "A",
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 419,
+    "name_kiswahili": "boga",
+    "name_english": "Pumpkin",
+    "portions": [
+      {
+        "size": "Std",
+        "plate": 400,
+        "saucer": 200
+      },
+      {
+        "size": "A",
+        "unit": 80,
+        "average": 150
+      }
+    ]
+  },
+  {
+    "code": 421,
+    "name_kiswahili": "nyanya chungu",
+    "name_english": "African eggplant",
+    "portions": [
+      {
+        "size": "S",
+        "saucer": 100
+      },
+      {
+        "size": "A",
+        "average": 75
+      }
+    ]
+  },
+  {
+    "code": 423,
+    "name_kiswahili": "nyanya",
+    "name_english": "Tomato",
+    "portions": [
+      {
+        "size": "VS",
+        "unit": 35
+      },
+      {
+        "size": "S",
+        "unit": 60
+      },
+      {
+        "size": "M",
+        "unit": 100
+      },
+      {
+        "size": "L",
+        "unit": 200
+      },
+      {
+        "size": "A",
+        "average": 65
+      }
+    ]
+  },
+  {
+    "code": 429,
+    "name_kiswahili": "pilipili hoho",
+    "name_english": "Green pepper",
+    "portions": [
+      {
+        "size": "S",
+        "unit": 60
+      },
+      {
+        "size": "M",
+        "unit": 100
+      },
+      {
+        "size": "L",
+        "unit": 150
+      },
+      {
+        "size": "A",
+        "average": 50
+      }
+    ]
+  },
+  {
+    "code": 432,
+    "name_kiswahili": "saladi",
+    "name_english": "Salad green",
+    "portions": [
+      {
+        "size": "A",
+        "average": 30
+      }
+    ]
+  },
+  {
+    "code": 451,
+    "name_kiswahili": "bia",
+    "name_english": "Beer",
+    "portions": [
+      {
+        "size": "Std",
+        "glass": 250,
+        "cup": 200,
+        "unit": 500
+      },
+      {
+        "size": "A",
+        "average": 500
+      }
+    ]
+  },
+  {
+    "code": 452,
+    "name_kiswahili": "pombe ya kienyeji",
+    "name_english": "Local brew",
+    "portions": [
+      {
+        "size": "A",
+        "average": 500
+      }
+    ]
+  },
+  {
+    "code": 455,
+    "name_kiswahili": "chocolate",
+    "name_english": "Candy chocolate",
+    "portions": [
+      {
+        "size": "A",
+        "average": 40
+      }
+    ]
+  },
+  {
+    "code": 458,
+    "name_kiswahili": "soda",
+    "name_english": "Carbonated drink",
+    "portions": [
+      {
+        "size": "Std",
+        "unit": 350
+      },
+      {
+        "size": "A",
+        "average": 250
+      }
+    ]
+  },
+  {
+    "code": 460,
+    "name_kiswahili": "senene",
+    "name_english": "Cricket",
+    "portions": [
+      {
+        "size": "Std",
+        "bowl": 100
+      },
+      {
+        "size": "A",
+        "average": 100
+      }
+    ]
+  },
+  {
+    "code": 461,
+    "name_kiswahili": "asali",
+    "name_english": "Honey",
+    "portions": [
+      {
+        "size": "A",
+        "unit": 10
+      }
+    ]
+  },
+  {
+    "code": 462,
+    "name_kiswahili": "maji ya matunda yoyote",
+    "name_english": "Any fruit juice",
+    "portions": [
+      {
+        "size": "Std",
+        "glass": 250
+      },
+      {
+        "size": "A",
+        "average": 250
+      }
+    ]
+  },
+
+    {
+      "code": 658,
+      "name_kiswahili": "choroko",
+      "name_english": "Mung bean",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 200,
+          "saucer": 100
+        },
+        {
+          "size": "A",
+          "average": 100
+        }
+      ]
+    },
+    {
+      "code": 659,
+      "name_kiswahili": "mbaazi mbichi za kuchemshwa",
+      "name_english": "Pigeon peas fresh boiled",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 660,
+      "name_kiswahili": "mchuzi wa mbaazi na tui la nazi",
+      "name_english": "Pigeon pea relish with coconut milk",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 661,
+      "name_kiswahili": "mchuzi wa mbaazi na mafuta",
+      "name_english": "Pigeon pea relish with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 662,
+      "name_kiswahili": "uji wa soya na sukari",
+      "name_english": "Soya porridge + sugar",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200
+        },
+        {
+          "size": "A",
+          "average": 350
+        }
+      ]
+    },
+    {
+      "code": 663,
+      "name_kiswahili": "njugumawe",
+      "name_english": "Bambara nuts",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 500,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 664,
+      "name_kiswahili": "dengu iliyopikwa",
+      "name_english": "Chick peas cooked",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 200,
+          "saucer": 100
+        },
+        {
+          "size": "A",
+          "average": 75
+        }
+      ]
+    },
+    {
+      "code": 664,
+      "name_kiswahili": "mchuzi wa dengu na tui la nazi",
+      "name_english": "Chick pea relish with coconut milk",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 300,
+          "saucer": 150
+        },
+        {
+          "size": "A",
+          "average": 150
+        }
+      ]
+    },
+    {
+      "code": 752,
+      "name_kiswahili": "mchicha bila mafuta",
+      "name_english": "Spinach relish no oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 753,
+      "name_kiswahili": "mchicha na mafuta",
+      "name_english": "Spinach relish + oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 754,
+      "name_kiswahili": "kachumbari",
+      "name_english": "Cabbage and onion salad",
+      "portions": [
+        {
+          "size": "Std",
+          "saucer": 100
+        },
+        {
+          "size": "A",
+          "average": 50
+        }
+      ]
+    },
+    {
+      "code": 755,
+      "name_kiswahili": "mchuzi wa kabichi na mafuta",
+      "name_english": "Cabbage relish with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        }
+      ]
+    },
+    {
+      "code": 756,
+      "name_kiswahili": "mchuzi wa kabichi na mafuta",
+      "name_english": "Cabbage relish with oil",
+      "portions": [
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 757,
+      "name_kiswahili": "mchuzi wa kisamvu na tui la nazi",
+      "name_english": "Cassava leaf relish with coconut",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 759,
+      "name_kiswahili": "mchuzi wa majani ya kunde na tui la nazi",
+      "name_english": "Cow pea leaf relish with coconut",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 762,
+      "name_kiswahili": "mchuzi wa mboga za majani na karanga",
+      "name_english": "Medium green leaf relish with groundnuts",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 763,
+      "name_kiswahili": "mchuzi wa mboga za majani na tui la nazi",
+      "name_english": "Medium green leaf relish with coconut milk",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        }
+      ]
+    },
+    {
+      "code": 763,
+      "name_kiswahili": "mchuzi wa spinachi na tui la nazi",
+      "name_english": "Medium green leaf relish with coconut milk",
+      "portions": [
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 765,
+      "name_kiswahili": "mchuzi wa bamia na tui la nazi",
+      "name_english": "Okra with coconut milk",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 766,
+      "name_kiswahili": "njegere",
+      "name_english": "Peas plain",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 767,
+      "name_kiswahili": "mchuzi wa njegere",
+      "name_english": "Green pea relish",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 768,
+      "name_kiswahili": "mchuzi wa majani ya maboga na mafuta",
+      "name_english": "Pumpkin leaf relish with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 769,
+      "name_kiswahili": "mchuzi wa majani ya maboga bila mafuta",
+      "name_english": "Pumpkin leaf relish without oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 770,
+      "name_kiswahili": "mchuzi wa spinachi na karanga na mafuta",
+      "name_english": "Spinach relish with groundnuts and oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 771,
+      "name_kiswahili": "mchuzi wa spinachi na ufuta",
+      "name_english": "Spinach relish with sesame seeds",
+      "portions": [
+        {
+          "size": "9",
+          "bowl": 400,
+          "saucer": 200
+        },
+        {
+          "size": "10",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 772,
+      "name_kiswahili": "sambusa ya viazi",
+      "name_english": "Samosa Potato",
+      "portions": [
+        {
+          "size": "Std",
+          "unit": 70
+        },
+        {
+          "size": "A",
+          "average": 210
+        }
+      ]
+    },
+    {
+      "code": 776,
+      "name_kiswahili": "mchuzi wa mchunga",
+      "name_english": "Mchunga relish with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 300,
+          "saucer": 100
+        },
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 778,
+      "name_kiswahili": "mchuzi wa njegere, tui la nazi na mafuta",
+      "name_english": "Green pea relish with coconut and oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 300,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 779,
+      "name_kiswahili": "mchuzi wa majani ya kunde na karanga",
+      "name_english": "Cowpea leaf relish with groundnuts",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 300,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 780,
+      "name_kiswahili": "mchuzi wa matembele na tui la nazi",
+      "name_english": "Potato leaf relish with coconut milk",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 300,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 120
+        }
+      ]
+    },
+    {
+      "code": 781,
+      "name_kiswahili": "bamia ya kukaanga",
+      "name_english": "Fried okra",
+      "portions": [
+        {
+          "size": "A",
+          "average": 90
+        }
+      ]
+    },
+    {
+      "code": 782,
+      "name_kiswahili": "mchuzi wa njegere na tui la nazi",
+      "name_english": "Green peas relish with coconut milk",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 150,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 100
+        }
+      ]
+    },
+    {
+      "code": 851,
+      "name_kiswahili": "mchuzi wa mchicha bila mafuta",
+      "name_english": "Spinach broth no oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 852,
+      "name_kiswahili": "mchuzi wa mchicha na mafuta",
+      "name_english": "Spinach broth+ oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 853,
+      "name_kiswahili": "mchuzi wa nyama bila mafuta",
+      "name_english": "Beef broth no oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 854,
+      "name_kiswahili": "mchuzi wa nyama na mafuta",
+      "name_english": "Beef broth with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 855,
+      "name_kiswahili": "mchuzi wa kabichi bila mafuta",
+      "name_english": "Cabbage broth no oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 856,
+      "name_kiswahili": "mchuzi wa kabichi na mafuta",
+      "name_english": "Cabbage broth with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 858,
+      "name_kiswahili": "mchuzi wa kisamvu na tui la nazi",
+      "name_english": "Cassava leaf broth with coconut milk",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 860,
+      "name_kiswahili": "mchuzi wa kisamvu na mafuta",
+      "name_english": "Cassava leaf broth with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 861,
+      "name_kiswahili": "mchuzi wa kuku bila mafuta",
+      "name_english": "Chicken broth no oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 862,
+      "name_kiswahili": "mchuzi wa kuku na mafuta",
+      "name_english": "Chicken broth with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 863,
+      "name_kiswahili": "supu ya kunde na tui la nazi",
+      "name_english": "Cow pea broth with coconut milk",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 864,
+      "name_kiswahili": "supu ya kunde na mafuta",
+      "name_english": "Cow pea leaf broth with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 865,
+      "name_kiswahili": "supu ya kunde bila mafuta",
+      "name_english": "Cow pea broth with no oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 866,
+      "name_kiswahili": "supu ya majani ya kunde na tui la nazi",
+      "name_english": "Cow pea leaf broth with cocounut milk",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 867,
+      "name_kiswahili": "supu ya majani ya kunde na mafuta",
+      "name_english": "Cow pea leaf broth with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 868,
+      "name_kiswahili": "supu ya samaki na mafuta",
+      "name_english": "Fish broth with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 869,
+      "name_kiswahili": "supu ya samaki bila mafuta",
+      "name_english": "Fish broth no oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 870,
+      "name_kiswahili": "supu ya njegere bila mafuta",
+      "name_english": "Green pea broth no oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 871,
+      "name_kiswahili": "supu ya njegere na mafuta",
+      "name_english": "Green pea broth with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 872,
+      "name_kiswahili": "supu ya maharage na tui la nazi",
+      "name_english": "Kidney bean broth with coconut milk",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 873,
+      "name_kiswahili": "supu ya maharage bila mafuta",
+      "name_english": "Kidney bean broth no oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 874,
+      "name_kiswahili": "supu ya maharage na mafuta",
+      "name_english": "Kidney bean broth with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 878,
+      "name_kiswahili": "supu ya maboga bila mafuta",
+      "name_english": "Pumpkin leaf broth no oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 879,
+      "name_kiswahili": "supu ya dagaa na mafuta",
+      "name_english": "Sardines broth with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 880,
+      "name_kiswahili": "supu ya njegere na tui la nazi",
+      "name_english": "Green pea broth with coconut",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 881,
+      "name_kiswahili": "supu ya majani ya kunde na mafuta",
+      "name_english": "Cow pea leaf broth with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 200,
+          "tbsp": 20,
+          "saucer": 60
+        },
+        {
+          "size": "A",
+          "average": 60
+        }
+      ]
+    },
+    {
+      "code": 951,
+      "name_kiswahili": "ndizi zilizopikwa na mafuta",
+      "name_english": "Banana with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 420,
+          "plate": 500,
+          "saucer": 300
+        },
+        {
+          "size": "A",
+          "average": 515
+        }
+      ]
+    },
+    {
+      "code": 952,
+      "name_kiswahili": "ndizi zilizopikwa na tui la nazi na nyama",
+      "name_english": "Banana with meat and coconut milk",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 420,
+          "plate": 500,
+          "saucer": 300
+        },
+        {
+          "size": "A",
+          "average": 515
+        }
+      ]
+    },
+    {
+      "code": 953,
+      "name_kiswahili": "ndizi zilizopikwa na nyama",
+      "name_english": "Banana with meat",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 420,
+          "plate": 500,
+          "saucer": 300
+        },
+        {
+          "size": "A",
+          "average": 515
+        }
+      ]
+    },
+    {
+      "code": 954,
+      "name_kiswahili": "ndizi zilizopikwa na korosho",
+      "name_english": "Banana with cashewnuts",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 420,
+          "plate": 500,
+          "saucer": 300
+        },
+        {
+          "size": "A",
+          "average": 515
+        }
+      ]
+    },
+    {
+      "code": 955,
+      "name_kiswahili": "ndizi zilizopikwa na tui la nazi",
+      "name_english": "Banana with coconut",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 420,
+          "plate": 420,
+          "saucer": 210
+        },
+        {
+          "size": "A",
+          "average": 515
+        }
+      ]
+    },
+    {
+      "code": 956,
+      "name_kiswahili": "mhogo na tui na nazi",
+      "name_english": "Cassava with coconut",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "plate": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 400
+        }
+      ]
+    },
+    {
+      "code": 957,
+      "name_kiswahili": "mhogo wa kukanga",
+      "name_english": "Cassava fried",
+      "portions": [
+        {
+          "size": "Std",
+          "unit": 50
+        },
+        {
+          "size": "A",
+          "average": 350
+        }
+      ]
+    },
+    {
+      "code": 958,
+      "name_kiswahili": "mchuzi wa viazi mviringo na mafuta",
+      "name_english": "Potato relish with oil",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 450,
+          "plate": 450,
+          "saucer": 225
+        },
+        {
+          "size": "A",
+          "average": 450
+        }
+      ]
+    },
+    {
+      "code": 959,
+      "name_kiswahili": "mchuzi wa viazi mviringo na nyama",
+      "name_english": "Potato relish with beef",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 450,
+          "plate": 450,
+          "saucer": 225
+        },
+        {
+          "size": "A",
+          "average": 450
+        }
+      ]
+    },
+    {
+      "code": 960,
+      "name_kiswahili": "viazi chips",
+      "name_english": "Potato chips",
+      "portions": [
+        {
+          "size": "Std",
+          "plate": 300,
+          "saucer": 150
+        },
+        {
+          "size": "A",
+          "average": 300
+        }
+      ]
+    },
+    {
+      "code": 961,
+      "name_kiswahili": "viazi viringo vya kuchemsa",
+      "name_english": "Potato boiled",
+      "portions": [
+        {
+          "size": "Std",
+          "plate": 300,
+          "saucer": 150
+        },
+        {
+          "size": "A",
+          "average": 225
+        }
+      ]
+    },
+    {
+      "code": 963,
+      "name_kiswahili": "futari",
+      "name_english": "Selected fruits and tubers",
+      "portions": [
+        {
+          "size": "Std",
+          "plate": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 400
+        }
+      ]
+    },
+    {
+      "code": 964,
+      "name_kiswahili": "ndizi mbichi ya kukaanga",
+      "name_english": "Banana fried",
+      "portions": [
+        {
+          "size": "Std",
+          "unit": 130
+        },
+        {
+          "size": "A",
+          "average": 310
+        }
+      ]
+    },
+    {
+      "code": 965,
+      "name_kiswahili": "mhogo mchanganyiko",
+      "name_english": "Cassava mixed",
+      "portions": [
+        {
+          "size": "Std",
+          "plate": 100,
+          "saucer": 50
+        },
+        {
+          "size": "A",
+          "average": 100
+        }
+      ]
+    },
+    {
+      "code": 965,
+      "name_kiswahili": "mhogo mtupu",
+      "name_english": "Cassava plain",
+      "portions": [
+        {
+          "size": "Std",
+          "plate": 350,
+          "saucer": 175
+        },
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 966,
+      "name_kiswahili": "viazi vitamu vya kukaanga",
+      "name_english": "Sweet potato fried",
+      "portions": [
+        {
+          "size": "Std",
+          "plate": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 967,
+      "name_kiswahili": "viazi vitamu vya kuchemsha vitupu",
+      "name_english": "Boiled sweet potato plain",
+      "portions": [
+        {
+          "size": "Std",
+          "plate": 400,
+          "saucer": 200
+        },
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 968,
+      "name_kiswahili": "ndizi mbichi na maharage",
+      "name_english": "Banana with kidney bean",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 420,
+          "plate": 500,
+          "saucer": 300
+        },
+        {
+          "size": "A",
+          "average": 515
+        }
+      ]
+    },
+    {
+      "code": 969,
+      "name_kiswahili": "ndizi mbichi ya kuchemsha",
+      "name_english": "Banana plain boiled",
+      "portions": [
+        {
+          "size": "Std",
+          "plate": 290,
+          "saucer": 175
+        },
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 970,
+      "name_kiswahili": "maghimbi mchanganyiko",
+      "name_english": "Taro mixed",
+      "portions": [
+        {
+          "size": "Std",
+          "plate": 200,
+          "saucer": 100
+        },
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 970,
+      "name_kiswahili": "maghimbi ya kuchemsha",
+      "name_english": "Taro plain",
+      "portions": [
+        {
+          "size": "Std",
+          "plate": 290,
+          "saucer": 175
+        },
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 972,
+      "name_kiswahili": "mchuzi wa viazi mviringo na tui la nazi",
+      "name_english": "Potato relish with coconut milk",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "plate": 400,
+          "saucer": 225
+        },
+        {
+          "size": "A",
+          "average": 450
+        }
+      ]
+    },
+    {
+      "code": 973,
+      "name_kiswahili": "ndizi zilizopikwa na nyama na mboga za majani",
+      "name_english": "Banana with meat and vegetables",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 420,
+          "plate": 500,
+          "saucer": 300
+        },
+        {
+          "size": "A",
+          "average": 515
+        }
+      ]
+    },
+    {
+      "code": 975,
+      "name_kiswahili": "mtori",
+      "name_english": "Mtori",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 400,
+          "cup": 250
+        },
+        {
+          "size": "A",
+          "average": 350
+        }
+      ]
+    },
+    {
+      "code": 1001,
+      "name_kiswahili": "chai na sukari bila maziwa",
+      "name_english": "Tea with sugar no milk",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 200,
+          "cup": 200
+        },
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 1002,
+      "name_kiswahili": "chai na maziwa na sugar",
+      "name_english": "Tea with milk and sugar",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 200,
+          "cup": 200
+        },
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 1003,
+      "name_kiswahili": "chai na maziwa bila sukari",
+      "name_english": "Tea with milk no sugar",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 200,
+          "cup": 200
+        },
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 1004,
+      "name_kiswahili": "kahawa na sukari bila maziwa",
+      "name_english": "Coffee with sugar no milk",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 200,
+          "cup": 200
+        },
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 1005,
+      "name_kiswahili": "kahawa na maziwa na sugar",
+      "name_english": "Coffee with milk and sugar",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 200,
+          "cup": 200
+        },
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 1006,
+      "name_kiswahili": "kahawa na maziwa bila sukari",
+      "name_english": "Coffee with milk no sugar",
+      "portions": [
+        {
+          "size": "Std",
+          "bowl": 200,
+          "cup": 200
+        }
+      ]
+    },
+    {
+      "code": 1101,
+      "name_kiswahili": "kahawa na maziwa bila sukari",
+      "name_english": "Coffee with milk no sugar",
+      "portions": [
+        {
+          "size": "A",
+          "average": 200
+        }
+      ]
+    },
+    {
+      "code": 1102,
+      "name_kiswahili": "samli",
+      "name_english": "Butter oil - ghee",
+      "portions": [
+        {
+          "size": "A",
+          "average": 7.5
+        }
+      ]
+    },
+    {
+      "code": 1104,
+      "name_kiswahili": "tui la nazi",
+      "name_english": "Coconut milk (squeezed out of coconut)",
+      "portions": [
+        {
+          "size": "A",
+          "average": 50
+        }
+      ]
+    },
+    {
+      "code": 1107,
+      "name_kiswahili": "margarine na mkate",
+      "name_english": "Margarine with bread",
+      "portions": [
+        {
+          "size": "A",
+          "average": 15
+        }
+      ]
+    },
+    {
+      "code": 1107,
+      "name_kiswahili": "margarine in mixed dish",
+      "name_english": "Margarine",
+      "portions": [
+        {
+          "size": "A",
+          "average": 10
+        }
+      ]
+    },
+    {
+      "code": 1108,
+      "name_kiswahili": "mafuta ya mawese",
+      "name_english": "Red palm oil",
+      "portions": [
+        {
+          "size": "A",
+          "average": 10
+        }
+      ]
+    },
+    {
+      "code": 1111,
+      "name_kiswahili": "mafuta ya Cowboy",
+      "name_english": "Vegetable fat",
+      "portions": [
+        {
+          "size": "A",
+          "average": 10
+        }
+      ]
+    },
+    {
+      "code": 1113,
+      "name_kiswahili": "mafuta ya maji (yatokanayo na mimea)",
+      "name_english": "Vegetable oil",
+      "portions": [
+        {
+          "size": "A",
+          "average": 10
+        }
+      ]
+    }
+  ]
+  
+}

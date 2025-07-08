@@ -105,7 +105,7 @@ fun PredictionResultsScreen(
                 modifier = Modifier.weight(1f),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                items(selectedIngredients) { ingredient ->
+                items(selectedIngredients.entries.toList()) { entry ->
                     Card(
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp)
@@ -120,24 +120,16 @@ fun PredictionResultsScreen(
                                 modifier = Modifier.weight(1f)
                             ) {
                                 Text(
-                                    text = ingredient.name,
+                                    text = entry.key,
                                     fontSize = 16.sp,
                                     fontWeight = FontWeight.Medium
                                 )
-                                if (ingredient.predictedQuantity != null) {
-                                    Text(
-                                        text = "${ingredient.predictedQuantity} ${ingredient.predictedUnit}",
-                                        fontSize = 14.sp,
-                                        color = MaterialTheme.colorScheme.primary,
-                                        fontWeight = FontWeight.Medium
-                                    )
-                                } else {
-                                    Text(
-                                        text = "Prediction not available",
-                                        fontSize = 14.sp,
-                                        color = MaterialTheme.colorScheme.error
-                                    )
-                                }
+                                Text(
+                                    text = "${entry.value} units",
+                                    fontSize = 14.sp,
+                                    color = MaterialTheme.colorScheme.primary,
+                                    fontWeight = FontWeight.Medium
+                                )
                             }
                         }
                     }

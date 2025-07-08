@@ -1,0 +1,218 @@
+[
+  {
+    "Age Group": "Children (1-5 yrs)",
+    "Food Group": "Starchy roots (cassava)",
+    "Intake (g/day)": "260",
+    "Energy (kcal/day)": "390",
+    "Protein (g/day)": "3.6",
+    "Fat (g/day)": "0.8"
+  },
+  {
+    "Age Group": "Children (1-5 yrs)",
+    "Food Group": "Cereals (maize/rice)",
+    "Intake (g/day)": "150",
+    "Energy (kcal/day)": "540",
+    "Protein (g/day)": "14.3",
+    "Fat (g/day)": "7"
+  },
+  {
+    "Age Group": "Children (1-5 yrs)",
+    "Food Group": "Fruits & vegetables",
+    "Intake (g/day)": "80",
+    "Energy (kcal/day)": "40",
+    "Protein (g/day)": "0.8",
+    "Fat (g/day)": "0.2"
+  },
+  {
+    "Age Group": "Children (1-5 yrs)",
+    "Food Group": "Pulses (beans)",
+    "Intake (g/day)": "20",
+    "Energy (kcal/day)": "68",
+    "Protein (g/day)": "4",
+    "Fat (g/day)": "0.4"
+  },
+  {
+    "Age Group": "Children (1-5 yrs)",
+    "Food Group": "Milk",
+    "Intake (g/day)": "100",
+    "Energy (kcal/day)": "66",
+    "Protein (g/day)": "3.4",
+    "Fat (g/day)": "3.6"
+  },
+  {
+    "Age Group": "Children (1-5 yrs)",
+    "Food Group": "Meat (beef/chicken)",
+    "Intake (g/day)": "15",
+    "Energy (kcal/day)": "38",
+    "Protein (g/day)": "4",
+    "Fat (g/day)": "2.3"
+  },
+  {
+    "Age Group": "Children (1-5 yrs)",
+    "Food Group": "Fish",
+    "Intake (g/day)": "10",
+    "Energy (kcal/day)": "21",
+    "Protein (g/day)": "1.9",
+    "Fat (g/day)": "1.1"
+  },
+  {
+    "Age Group": "Children (1-5 yrs)",
+    "Food Group": "Oils (cooking oil)",
+    "Intake (g/day)": "10",
+    "Energy (kcal/day)": "90",
+    "Protein (g/day)": "0",
+    "Fat (g/day)": "10"
+  },
+  {
+    "Age Group": "Children (1-5 yrs)",
+    "Food Group": "Sweeteners",
+    "Intake (g/day)": "15",
+    "Energy (kcal/day)": "60",
+    "Protein (g/day)": "0",
+    "Fat (g/day)": "0"
+  },
+  {
+    "Age Group": "Teens (13-18 yrs)",
+    "Food Group": "Starchy roots (cassava)",
+    "Intake (g/day)": "390",
+    "Energy (kcal/day)": "585",
+    "Protein (g/day)": "5.4",
+    "Fat (g/day)": "1.2"
+  },
+  {
+    "Age Group": "Teens (13-18 yrs)",
+    "Food Group": "Cereals (maize/rice)",
+    "Intake (g/day)": "225",
+    "Energy (kcal/day)": "810",
+    "Protein (g/day)": "21.45",
+    "Fat (g/day)": "10.5"
+  },
+  {
+    "Age Group": "Teens (13-18 yrs)",
+    "Food Group": "Fruits & vegetables",
+    "Intake (g/day)": "120",
+    "Energy (kcal/day)": "60",
+    "Protein (g/day)": "1.2",
+    "Fat (g/day)": "0.3"
+  },
+  {
+    "Age Group": "Teens (13-18 yrs)",
+    "Food Group": "Pulses (beans)",
+    "Intake (g/day)": "30",
+    "Energy (kcal/day)": "102",
+    "Protein (g/day)": "6",
+    "Fat (g/day)": "0.6"
+  },
+  {
+    "Age Group": "Teens (13-18 yrs)",
+    "Food Group": "Milk",
+    "Intake (g/day)": "150",
+    "Energy (kcal/day)": "99",
+    "Protein (g/day)": "5.1",
+    "Fat (g/day)": "5.4"
+  },
+  {
+    "Age Group": "Teens (13-18 yrs)",
+    "Food Group": "Meat (beef/chicken)",
+    "Intake (g/day)": "22.5",
+    "Energy (kcal/day)": "57",
+    "Protein (g/day)": "6",
+    "Fat (g/day)": "3.45"
+  },
+  {
+    "Age Group": "Teens (13-18 yrs)",
+    "Food Group": "Fish",
+    "Intake (g/day)": "15",
+    "Energy (kcal/day)": "31.5",
+    "Protein (g/day)": "2.85",
+    "Fat (g/day)": "1.65"
+  },
+  {
+    "Age Group": "Teens (13-18 yrs)",
+    "Food Group": "Oils (cooking oil)",
+    "Intake (g/day)": "15",
+    "Energy (kcal/day)": "135",
+    "Protein (g/day)": "0",
+    "Fat (g/day)": "15"
+  },
+  {
+    "Age Group": "Teens (13-18 yrs)",
+    "Food Group": "Sweeteners",
+    "Intake (g/day)": "22.5",
+    "Energy (kcal/day)": "90",
+    "Protein (g/day)": "0",
+    "Fat (g/day)": "0"
+  },
+  {
+    "Age Group": "Adults (18+ yrs)",
+    "Food Group": "Starchy roots (cassava)",
+    "Intake (g/day)": "518",
+    "Energy (kcal/day)": "829",
+    "Protein (g/day)": "7.3",
+    "Fat (g/day)": "1.6"
+  },
+  {
+    "Age Group": "Adults (18+ yrs)",
+    "Food Group": "Cereals (maize/rice/wheat)",
+    "Intake (g/day)": "307",
+    "Energy (kcal/day)": "1105",
+    "Protein (g/day)": "29.2",
+    "Fat (g/day)": "14.4"
+  },
+  {
+    "Age Group": "Adults (18+ yrs)",
+    "Food Group": "Fruits & vegetables",
+    "Intake (g/day)": "158",
+    "Energy (kcal/day)": "80",
+    "Protein (g/day)": "1.6",
+    "Fat (g/day)": "0.3"
+  },
+  {
+    "Age Group": "Adults (18+ yrs)",
+    "Food Group": "Pulses (beans)",
+    "Intake (g/day)": "42",
+    "Energy (kcal/day)": "143",
+    "Protein (g/day)": "8.4",
+    "Fat (g/day)": "0.8"
+  },
+  {
+    "Age Group": "Adults (18+ yrs)",
+    "Food Group": "Milk & eggs",
+    "Intake (g/day)": "72",
+    "Energy (kcal/day)": "50",
+    "Protein (g/day)": "3.8",
+    "Fat (g/day)": "2.9"
+  },
+  {
+    "Age Group": "Adults (18+ yrs)",
+    "Food Group": "Meat & offal",
+    "Intake (g/day)": "30",
+    "Energy (kcal/day)": "75",
+    "Protein (g/day)": "7.8",
+    "Fat (g/day)": "4.5"
+  },
+  {
+    "Age Group": "Adults (18+ yrs)",
+    "Food Group": "Fish & seafood",
+    "Intake (g/day)": "19",
+    "Energy (kcal/day)": "39",
+    "Protein (g/day)": "3.6",
+    "Fat (g/day)": "2.3"
+  },
+  {
+    "Age Group": "Adults (18+ yrs)",
+    "Food Group": "Sweeteners (sugar)",
+    "Intake (g/day)": "21",
+    "Energy (kcal/day)": "84",
+    "Protein (g/day)": "0",
+    "Fat (g/day)": "0"
+  },
+  {
+    "Age Group": "Adults (18+ yrs)",
+    "Food Group": "Vegetable oils",
+    "Intake (g/day)": "14",
+    "Energy (kcal/day)": "126",
+    "Protein (g/day)": "0",
+    "Fat (g/day)": "14"
+  }
+] 

@@ -2,4 +2,13 @@
 <resources>
 
     <style name="Theme.MealEastimatoNew" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.MealEstimator" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
 </resources>

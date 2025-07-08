@@ -1,6 +1,8 @@
 package com.pritechvior.mealeastimatonew.ui.screens
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.*
@@ -9,6 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -20,17 +23,19 @@ fun AuthScreen(
     viewModel: MealEstimatorViewModel
 ) {
     var isLogin by remember { mutableStateOf(true) }
-    var username by remember { mutableStateOf("john_doe") } // Pre-filled for demo
-    var email by remember { mutableStateOf("john@example.com") }
-    var password by remember { mutableStateOf("password123") } // Pre-filled for demo
+    var username by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
     var showError by remember { mutableStateOf(false) }
+    var errorMessage by remember { mutableStateOf("") }
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+            .verticalScroll(rememberScrollState())
+            .padding(horizontal = 24.dp)
+            .padding(top = 24.dp, bottom = 36.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             text = if (isLogin) "Welcome Back!" else "Create Account",
@@ -54,7 +59,11 @@ fun AuthScreen(
             onValueChange = { username = it },
             label = { Text("Username") },
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(12.dp)
+            shape = RoundedCornerShape(12.dp),
+            keyboardOptions = KeyboardOptions(
+                imeAction = ImeAction.Next
+            ),
+            singleLine = true
         )
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -65,8 +74,12 @@ fun AuthScreen(
                 onValueChange = { email = it },
                 label = { Text("Email") },
                 modifier = Modifier.fillMaxWidth(),
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
-                shape = RoundedCornerShape(12.dp)
+                keyboardOptions = KeyboardOptions(
+                    keyboardType = KeyboardType.Email,
+                    imeAction = ImeAction.Next
+                ),
+                shape = RoundedCornerShape(12.dp),
+                singleLine = true
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -78,14 +91,18 @@ fun AuthScreen(
             label = { Text("Password") },
             modifier = Modifier.fillMaxWidth(),
             visualTransformation = PasswordVisualTransformation(),
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-            shape = RoundedCornerShape(12.dp)
+            keyboardOptions = KeyboardOptions(
+                keyboardType = KeyboardType.Password,
+                imeAction = ImeAction.Done
+            ),
+            shape = RoundedCornerShape(12.dp),
+            singleLine = true
         )
 
         if (showError) {
             Spacer(modifier = Modifier.height(8.dp))
             Text(
-                text = "Invalid credentials. Try: john_doe / password123",
+                text = errorMessage,
                 color = MaterialTheme.colorScheme.error,
                 fontSize = 14.sp
             )
@@ -95,16 +112,32 @@ fun AuthScreen(
 
         Button(
             onClick = {
+                if (username.isBlank() || password.isBlank() || (!isLogin && email.isBlank())) {
+                    showError = true
+                    errorMessage = when {
+                        username.isBlank() -> "Username is required"
+                        password.isBlank() -> "Password is required"
+                        !isLogin && email.isBlank() -> "Email is required"
+                        else -> "Please fill in all fields"
+                    }
+                    return@Button
+                }
+
                 val success = if (isLogin) {
-                    viewModel.login(username, password)
+                    viewModel.login(username.trim(), password)
                 } else {
-                    viewModel.register(username, email, password)
+                    viewModel.register(username.trim(), email.trim(), password)
                 }
 
                 if (success) {
                     onAuthSuccess()
                 } else {
                     showError = true
+                    errorMessage = if (isLogin) {
+                        "Invalid username or password"
+                    } else {
+                        "Username already exists. Please choose a different username."
+                    }
                 }
             },
             modifier = Modifier
@@ -124,41 +157,14 @@ fun AuthScreen(
         TextButton(onClick = {
             isLogin = !isLogin
             showError = false
+            username = ""
+            password = ""
+            email = ""
         }) {
             Text(
                 text = if (isLogin) "Don't have an account? Sign Up" else "Already have an account? Sign In",
                 fontSize = 14.sp
             )
-        }
-
-        if (isLogin) {
-            Spacer(modifier = Modifier.height(16.dp))
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                colors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.surfaceVariant
-                )
-            ) {
-                Column(
-                    modifier = Modifier.padding(16.dp)
-                ) {
-                    Text(
-                        text = "Demo Credentials:",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 14.sp
-                    )
-                    Text(
-                        text = "Username: john_doe",
-                        fontSize = 12.sp,
-                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
-                    )
-                    Text(
-                        text = "Password: password123",
-                        fontSize = 12.sp,
-                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
-                    )
-                }
-            }
         }
     }
 }

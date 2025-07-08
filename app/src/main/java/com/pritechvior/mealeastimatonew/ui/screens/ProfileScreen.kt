@@ -24,6 +24,7 @@ import com.pritechvior.mealeastimatonew.viewmodel.MealEstimatorViewModel
 @Composable
 fun ProfileScreen(
     onLogout: () -> Unit,
+    onSettingsClick: () -> Unit,
     viewModel: MealEstimatorViewModel
 ) {
     val currentUser = viewModel.currentUser
@@ -37,7 +38,16 @@ fun ProfileScreen(
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = MaterialTheme.colorScheme.onPrimary
-                )
+                ),
+                actions = {
+                    IconButton(onClick = onSettingsClick) {
+                        Icon(
+                            Icons.Default.Settings,
+                            contentDescription = "Settings",
+                            tint = MaterialTheme.colorScheme.onPrimary
+                        )
+                    }
+                }
             )
         }
     ) { padding ->
